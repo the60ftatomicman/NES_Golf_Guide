@@ -1,0 +1,82 @@
+Location for green is 25E0
+255f -- start of green "really" uses the predefine stuff!
+something more must be in the "green" code. Noticed 2 courses
+use the SAME data.
+
+The green arrows predefine moves the arrows it appears! they are predefined.
+By coruse 17 I realized I was wrong about the pattern the arrows predefine. I will have to redo this!
+Near the green arrows predefine is the hole hex which defines it's xy coordinates. Will need to add that to this chart.
+
+Green layout logic
+directions = (
+					00=up,
+					01=up-right,
+					02=right,
+					03=down-right,
+					04=down,
+					05=down-left,
+					06=left,
+					07=up-left,
+					rest are like...fairway spacess)
+Mapping Locations
+Course Number, Fairway Start, Fairway End,Green Arrow Spacing,Green Arrow Direction,Green Set to Use ,Green Start, Green End
+1            , 26D0         ,27a3        ,2562               ,2574                 ,2586             ,25e9       ,2636
+2            , 2a9d         ,2b99        ,2563               ,2575                 ,2587             ,25e9       ,2636
+3            , 32dd         ,33c8        ,2564               ,2576                 ,2588             ,25e9       ,2636
+4            , 34b3         ,35be        ,2565               ,2577                 ,2589             ,259e       ,25e8
+5            , 297d         ,2a9b        ,2566               ,2578                 ,258a             ,2637       ,268f
+6            , 2ee4         ,2fd4        ,2567               ,2579                 ,258b             ,259e       ,25e8
+7            , 30b8         ,31dd        ,2568               ,257a                 ,258c             ,25e9       ,2636
+8            , 37b6         ,3900        ,2569               ,257b                 ,258d             ,2637       ,268f
+9            , 36b3         ,37b5        ,256a               ,257c                 ,258e             ,25e9       ,2636
+10           , 2fd5         ,30b7        ,256b               ,257d                 ,258f             ,259e       ,25e8
+11           , 2ddc         ,2ee3        ,256c               ,257e                 ,2590             ,25e9       ,2636
+12           , 2cf8         ,2ddb        ,256d               ,257f                 ,2591             ,25e9       ,2636
+13           , 27a4         ,28b9        ,256e               ,2580                 ,2592             ,2637       ,268f
+14           , 28ba         ,297c        ,256f               ,2581                 ,2593             ,259e       ,25e8
+15           , 33c9         ,34b2        ,2570               ,2582                 ,2594             ,25e9       ,2636
+16           , 2b9a         ,2cf7        ,2571               ,2583                 ,2595             ,25e9       ,2636
+17           , 35bf         ,36b2        ,2572               ,2584                 ,2596             ,25e9       ,2636
+18           , 31de         ,32dc        ,2573               ,2585                 ,2597             ,2637       ,268f
+
+
+Therories 2599
+1st = spacing between arrows
+2nd = direction (
+					00=up,
+					01=up-right,
+					02=right,
+					03=down-right,
+					04=down,
+					05=down-left,
+					06=left,
+					07=up-left,
+					rest are like...fairway spacess)
+3rd = determines which predefined set to load! (only left digit?)
+4th = starting/ending? position of the green read (from above)(both digits effect!)
+5th = just a pointer to some more memory. don't touch it!
+course,1st     ,2nd     ,3rd     ,4th     ,5th
+1     ,2562(03),2574(04),2586(21),2599(d9),259c(e5)
+2     ,2563(03),2575(05),2587(11),2599(d9),259c(e5)
+3     ,2564(03),2576(03),2588(21),2599(d9),259c(e5)
+4     ,2565(03),2577(03),2589(10),2599(d9),259c(e5)
+5     ,2566(02),2578(03),258a(12),2599(d9),259c(e5)
+6     ,2567(01),2579(03),258b(00),2599(d9),259c(e5)
+7     ,2568(03),257a(03),258c(01),2599(d9),259c(e5)
+8     ,2569(02),257b(03),258d(12),2599(d9),259c(e5)
+9     ,256a(01),257c(03),258e(11),2599(d9),259c(e5)
+10    ,256b(01),257d(03),258f(00),2599(d9),259c(e5)
+11    ,256c(02),257e(03),2590(20),2599(d9),259c(e5)
+12    ,256d(03),257f(03),2591(21),2599(d9),259c(e5)
+13    ,256e(03),2580(03),2592(02),2599(d9),259c(e5)
+14    ,256f(01),2581(03),2593(00),2599(d9),259c(e5)
+15    ,2570(02),2582(03),2594(01),2599(d9),259c(e5)
+16    ,2571(02),2583(03),2595(21),2599(d9),259c(e5)
+17    ,2572(01),2584(03),2596(21),2599(d9),259c(e5)
+18    ,2573(02),2585(03),2597(12),2599(d9),259c(e5)
+
+Neat Notes
+21c5 in rom is where some of our text is!
+3fa3 in rom is where our finish text is (bogey and what not)
+5f12 in rom is "L.LALA"
+1d1c in rom is title text
