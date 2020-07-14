@@ -148,7 +148,7 @@ Course Number, Fairway Start, Fairway End, Green Arrow Spacing, Green Arrow Dire
 - In my disorganized notes I found alot of the text locations. I should make a table of that!
 - Sprite locations, title locations should be marked
 - There are two values near the predefined green location called for all 18 holes. The values are D9(~2598) and E5(~259A). They seem to adjust the range and length of our predefined green definitions. If we could modify these we may be able to get MORE predefined shapes!
-
+- document all tile HEX values.
 
 
 
