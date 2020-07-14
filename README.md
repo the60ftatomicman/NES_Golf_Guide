@@ -53,6 +53,14 @@ ex: I have 9d,b8,b9
 - we want 1 b9 ? **20**
 Note! 0 = 1, 1=2, etc when giving a quantity.
 
+#### Tree Macros
+Note this really occurs in the tile layout section HOWEVER it's worth defining here. Tree macros start with A.
+Anytime you see A# hexes, that means give me #+1 tree tiles.
+A0 = 1 tree tile
+A4 = 5 tree tiles
+AF = 16 tree tiles
+etc
+
 #### Tile layout and Divider Hex
 Time to define the entire non-sandtrap/green of the course. We have our macros, we have a guide with all the possible tile values.
 Tiles are defined **from TOP-LEFT** and **move RIGHT DOWN** wrapping every 16 tiles. That means if you had 03 followed by 0F in a row (for some odd reason) you'd add 4 tiles in row A, than add the next 12 tiles in row A and 4 tiles in row B.
