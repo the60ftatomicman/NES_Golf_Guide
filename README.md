@@ -4,6 +4,8 @@ Note I found this all out on the (e) release of Golf (so Golf(E).nes) this may n
 My initial investigation to all of this can be found here:
 https://www.romhacking.net/forum/index.php?topic=31006.0
 
+**if you are just looking for a nametable, I have included that in this repo. Just look under the disorganiezed notes for the .tbl file**
+
 ## Table of Contents
 1. Intro
 2. Terms I'll be Using
@@ -82,7 +84,7 @@ They follow the same pattern of definition until we reach **FF which is our Fina
 - Hex 3 | Left digit defines the X of the pin. right digit does nothing
 
 ### Designing a New Fairway
- <TODO -- don't have all the tile hex values yet>
+Use the cheat sheets table, find the memory location for the course you want to modify and just simply follow the template from above
  
 ### (Putting) Green Theory and How it Works
 <TODO -- how do I move the xy of the hole!?>
@@ -117,7 +119,37 @@ They work exactly like the fairways except their macros come from **255f,2560,25
 - TODO - Idk how to define the location of the hole yet. oh well.
 
 ### Designing a new set of predefined Greens
- <TODO -- don't have all the tile hex values yet>
+Use the cheat sheets table, or use the table under "Green Theory and How it Works".Find the memory location for the predefined greens you want to modify and just simply follow the template from above
+ 
+### Cheat Sheets for Tiles (Fairway and Green)
+
+### Memory Addresses Table
+Course Number, Fairway Start, Fairway End, Green Arrow Spacing, Green Arrow Direction, Green Set to Use , Green Start, Green End
+1            , 26D0         , 27a3       , 2562               , 2574                 , 2586             , 25e9       , 2636
+2            , 2a9d         , 2b99       , 2563               , 2575                 , 2587             , 25e9       , 2636
+3            , 32dd         , 33c8       , 2564               , 2576                 , 2588             , 25e9       , 2636
+4            , 34b3         , 35be       , 2565               , 2577                 , 2589             , 259e       , 25e8
+5            , 297d         , 2a9b       , 2566               , 2578                 , 258a             , 2637       , 268f
+6            , 2ee4         , 2fd4       , 2567               , 2579                 , 258b             , 259e       , 25e8
+7            , 30b8         , 31dd       , 2568               , 257a                 , 258c             , 25e9       , 2636
+8            , 37b6         , 3900       , 2569               , 257b                 , 258d             , 2637       , 268f
+9            , 36b3         , 37b5       , 256a               , 257c                 , 258e             , 25e9       , 2636
+10           , 2fd5         , 30b7       , 256b               , 257d                 , 258f             , 259e       , 25e8
+11           , 2ddc         , 2ee3       , 256c               , 257e                 , 2590             , 25e9       , 2636
+12           , 2cf8         , 2ddb       , 256d               , 257f                 , 2591             , 25e9       , 2636
+13           , 27a4         , 28b9       , 256e               , 2580                 , 2592             , 2637       , 268f
+14           , 28ba         , 297c       , 256f               , 2581                 , 2593             , 259e       , 25e8
+15           , 33c9         , 34b2       , 2570               , 2582                 , 2594             , 25e9       , 2636
+16           , 2b9a         , 2cf7       , 2571               , 2583                 , 2595             , 25e9       , 2636
+17           , 35bf         , 36b2       , 2572               , 2584                 , 2596             , 25e9       , 2636
+18           , 31de         , 32dc       , 2573               , 2585                 , 2597             , 2637       , 268f
+### TODO's
+- Figure out how the hole is controlled on the green
+- In my disorganized notes I found alot of the text locations. I should make a table of that!
+- Sprite locations, title locations should be marked
+- There are two values near the predefined green location called for all 18 holes. The values are D9(~2598) and E5(~259A). They seem to adjust the range and length of our predefined green definitions. If we could modify these we may be able to get MORE predefined shapes!
+
+
 
 
 
